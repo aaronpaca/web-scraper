@@ -26,7 +26,7 @@ class DBUtil:
                     password=password_var)
                 # create a cursor
                 cur = db_conn.cursor()
-                cur.execute('INSERT INTO articles."articlesContent" (title,body,authors,url) VALUES ( %s ,  %s, %s, %s )', (article.title,article.body,article.authors,article.full_url))
+                cur.execute('INSERT INTO articles."articlesContentTest" (title,body,authors,url) VALUES ( %s ,  %s, %s, %s )', (article.title,article.body,article.authors,article.full_url))
                 
 
             except (Exception, psycopg2.DatabaseError) as error:
